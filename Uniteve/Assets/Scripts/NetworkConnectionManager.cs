@@ -7,8 +7,10 @@ namespace Uniteve {
     public class NetworkConnectionManager : MonoBehaviourPunCallbacks
     {
         // Start is called before the first frame update
-        void Start()
+        public void StartConnecting()
         {
+            Debug.Log("Starting connection!");
+
             PhotonNetwork.OfflineMode = false;
             PhotonNetwork.NickName = "Player "+Random.value;
             PhotonNetwork.AutomaticallySyncScene = true;
